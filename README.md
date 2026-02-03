@@ -1,183 +1,112 @@
 # Learning-Python
 
-## 🧱 1. Python Fundamentals & Execution Model
+## 1. Python Basics
 
-- What Python is and where it’s used
-- Interpreted vs compiled languages
-- Python execution flow (source → bytecode → interpreter)
-- Writing and running Python programs
-- Indentation rules and code blocks
-- Keywords, identifiers, and comments
-- Script vs module execution
-- `__name__` and `__main__`
+* [ ] What Python is, where it’s used, and why it’s popular
+* [ ] Interpreted vs compiled languages
+* [ ] How Python executes code
+* [ ] Running Python (REPL, scripts, notebooks)
+* [ ] Indentation, keywords, naming conventions
+* [ ] Comments, docstrings, and PEP 8
+* [ ] `__name__` and module execution
 
-## 🧠 2. Variables, Typing & Memory Model
+## 2. Variables & Memory
 
-- Variables and dynamic typing
-- Assignment and object references
-- Everything in Python is an object
-- `id()` and object identity
-- Python memory model basics
-- Reference counting
-- Garbage collection
+* [ ] Variables as references
+* [ ] Dynamic typing
+* [ ] Object identity, equality, and `id()`
+* [ ] Mutable vs immutable objects
+* [ ] Memory model and garbage collection
 
-## 📦 3. Built-in Data Types
+## 3. Built-in Data Types
 
-- Numbers (`int`, `float`, `complex`)
-- Boolean logic
-- Strings (immutability, slicing, methods, formatting)
-- Lists (mutability, internal behavior)
-- Tuples and immutability
-- Sets and uniqueness
-- Dictionaries and key constraints
-- Choosing the right data structure
-- Efficient iteration over collections
+* [ ] Numbers and booleans (precision, truthy/falsy)
+* [ ] Strings (immutability, slicing, formatting, regex)
+* [ ] Lists, tuples, sets, dictionaries
+* [ ] Data structure internals and performance
+* [ ] Choosing the right data structure
 
-## 🔁 4. Control Flow & Iteration
+## 4. Control Flow & Iteration
 
-- Conditional statements
-- `for` and `while` loops
-- `range()`, `enumerate()`, `zip()`
-- Loop `else`
-- `break`, `continue`, `pass`
-- Iterables and iteration mechanics
+* [ ] Conditional logic
+* [ ] Loops and loop control
+* [ ] Iterables vs iterators
+* [ ] Iteration over core data types
+* [ ] `range`, `enumerate`, `zip`
 
-## ⚡ 5. Comprehensions & Pythonic Patterns
+## 5. Comprehensions & Generators
 
-- List comprehensions
-- Dict and set comprehensions
-- Generator expressions
-- Performance tradeoffs
-- When not to use comprehensions
+* [ ] List / dict / set comprehensions
+* [ ] Generator expressions
+* [ ] When to use (and not use) them
 
-## 🔧 6. Functions & Functional Programming
+## 6. Functions
 
-- Defining and calling functions
-- Parameters vs arguments
-- Positional vs keyword arguments
-- Default arguments and pitfalls
-- `*args` and `**kwargs`
-- `print()` vs `return()`
-- Lambda functions
-- `map`, `filter`, `reduce`
+* [ ] Function execution and scope
+* [ ] Arguments and defaults
+* [ ] `*args` and `**kwargs`
+* [ ] Return values vs side effects
+* [ ] Lambda functions
+* [ ] Writing reusable functions
 
-## 🚨 7. Error & Exception Handling
+## 7. Error Handling
 
-- Errors vs exceptions
-- Syntax vs runtime errors
-- Common Python exceptions
-- `try / except / else / finally`
-- Exception propagation
-- Custom exceptions
+* [ ] Errors vs exceptions
+* [ ] `try / except / else / finally`
+* [ ] Raising and defining exceptions
 
-## 🧩 8. Python Data Model & Special Methods
+## 8. Modules & Environments
 
-- Dunder (magic) methods
-- `__str__` vs `__repr__`
-- Comparison and hashing behavior
-- How `len()` works
-- Iteration via `__iter__` and `__next__`
+* [ ] Imports and execution context
+* [ ] Virtual environments
+* [ ] Dependency management
+* [ ] Reproducibility
 
-## 🔄 9. Iterators, Generators & Context Managers
+## 9. Python Internals
 
-- Iterators and generators
-- Generator functions
-- Memory efficiency of generators
-- Context managers
-- `with` statement
-- `__enter__` and `__exit__`
+* [ ] Dunder methods
+* [ ] Object comparison and hashing
+* [ ] Iteration protocol
+* [ ] Context managers
 
-## 🧠 10. Advanced Python Concepts
+## 10. Advanced Python
 
-- Closures
-- Decorators
-- Decorators with arguments
-- Monkey patching
-- `functools.lru_cache`
-- `@dataclass`
-- Type hints and `mypy`
+* [ ] Closures
+* [ ] Decorators
+* [ ] `@dataclass`
+* [ ] Type hints and `mypy`
 
-## ⚙ 11. Concurrency, GIL & Performance
+## 11. Concurrency & Performance
 
-- Global Interpreter Lock (GIL)
-- Threading vs multiprocessing
-- When to use multiprocessing
-- Asynchronous programming
-- `async` / `await`
-- `asyncio` basics
+* [ ] GIL basics
+* [ ] Threads vs processes
+* [ ] Async programming
 
-## 🧠 12. Object-Oriented Programming (OOP)
+## 12. Object-Oriented Programming
 
-### Core OOP
+* [ ] Classes and objects
+* [ ] Attributes and methods
+* [ ] Encapsulation
+* [ ] Inheritance and MRO
+* [ ] Polymorphism and abstraction
+* [ ] Common OOP pitfalls
 
-- Classes and objects
-- `__init__` and `self`
+## 13. Python for Data Analytics
 
-### Attributes & Methods
+* [ ] NumPy fundamentals
+* [ ] Pandas fundamentals
+* [ ] SQL with Python
+* [ ] Performance and memory awareness
 
-- Instance vs class variables
-- Instance, class, and static methods
+## 14. Visualization & Statistics
 
-### Encapsulation
+* [ ] Plotting basics
+* [ ] Descriptive statistics
+* [ ] Interpreting and explaining results
 
-- Public / protected / private
-- Name mangling
+## 15. Data Science Workflow
 
-### Inheritance
-
-- Single and multiple inheritance
-- Method overriding
-- `super()`
-- Method Resolution Order (MRO)
-
-### Polymorphism & Abstraction
-
-- Duck typing
-- Operator overloading
-- Abstract Base Classes (`abc`)
-
-### Common OOP Pitfalls
-
-- Shared mutable class variables
-- Mutable default attributes
-- Inheritance vs composition
-
-## 📊 13. Python for Data Analytics
-
-### NumPy
-
-- ndarray and vectorization
-- Broadcasting rules
-- Performance considerations
-
-### Pandas
-
-- Series vs DataFrame
-- Reading CSV / Excel / JSON
-- Data cleaning
-- Aggregations and `groupby`
-- Joins and merges
-- Time-series operations
-
-### SQL + Python
-
-- SQL vs pandas use cases
-- Database connectivity
-- Executing SQL from Python
-- Loading SQL data into pandas
-
-## 📈 14. Visualization & Statistics
-
-- Matplotlib vs Seaborn
-- Choosing appropriate charts
-- Visualization best practices
-- Mean, median, mode
-- Variance and standard deviation
-- Correlation vs causation
-
-## 🧪 15. Mini Projects
-
-- Data cleaning project
-- SQL + pandas analytics project
-- Time-series analysis
-- End-to-end pandas explanation
+* [ ] Jupyter best practices
+* [ ] Handling large datasets
+* [ ] Data validation and testing
+* [ ] End-to-end mini projects
