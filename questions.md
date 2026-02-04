@@ -44,7 +44,7 @@
 * [ ] Floating-point precision issues
 * [ ] Boolean logic and truthy / falsy values
 
-### Strings (for data cleaninh)
+### Strings (for data cleaning)
 
 * [ ] How are strings stored in memory?
 * [ ] Why are strings immutable? Strings as immutable sequences
