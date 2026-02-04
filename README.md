@@ -110,3 +110,6 @@
 * [ ] Handling large datasets
 * [ ] Data validation and testing
 * [ ] End-to-end mini projects
+
+This is the checklist I'll be using to track my learning progress.
+I'll be referring to [30-days-of-Python](https://github.com/Asabeneh/30-Days-Of-Python)
