@@ -122,8 +122,6 @@ Mostly **not needed** right now (used in systems/CP).
 | `<<`     | Left shift  |    |
 | `>>`     | Right shift |    |
 
-You can safely skip these for now 👍
-
 ## 🧠 Beginner Priority Order (Very Important)
 
 1️⃣ Arithmetic
@@ -145,7 +143,7 @@ print(a % b == 2)
 print(a > 5 and b < 5)
 ```
 
-Perfect topic 👌 — these three operators confuse *everyone* at first, so let’s lock them in properly.
+These three operators confuse *everyone* at first, so let’s lock them in properly.
 
 We’ll talk about:
 
@@ -279,7 +277,7 @@ You have **7 slices**, **2 people**.
 
 * `/` → `7 / 2 = 3.5` slices each
 * `//` → `7 // 2 = 3` full slices each
-* `%` → `7 % 2 = 1` slice left ove
+* `%` → `7 % 2 = 1` slice left over
 
 ## 🧪 Common beginner use cases
 
