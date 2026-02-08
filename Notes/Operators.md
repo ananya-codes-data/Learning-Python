@@ -144,3 +144,194 @@ print(a > b)
 print(a % b == 2)
 print(a > 5 and b < 5)
 ```
+
+Perfect topic 👌 — these three operators confuse *everyone* at first, so let’s lock them in properly.
+
+We’ll talk about:
+
+* `/` **Division**
+* `//` **Floor Division**
+* `%` **Modulus**
+
+I’ll explain **what they mean**, **how they behave**, and **when to use them**.
+
+## 1️⃣ Division `/` → gives the **exact result**
+
+### What it does
+
+* Divides numbers
+* **Always returns a float** (decimal), even if division is perfect
+
+```python
+print(10 / 2)
+print(7 / 2)
+```
+
+Output:
+
+```python
+5.0
+3.5
+```
+
+📌 Even `10 / 2` gives `5.0`, not `5`
+
+### When to use
+
+* When you need **precise values**
+* Averages, ratios, percentages, data science calculation
+
+## 2️⃣ Floor Division `//` → gives the **quotient only**
+
+### What it does
+
+* Divides and **removes the decimal part**
+* Returns the **largest whole number less than or equal to the result**
+
+```python
+print(10 // 2)
+print(7 // 2)
+```
+
+Output:
+
+```python
+5
+3
+```
+
+👉 It **does NOT round**, it **cuts off**.
+
+### ⚠️ Important with negative numbers
+
+```python
+print(-7 // 2)
+```
+
+Output:
+
+```python
+-4
+```
+
+Why?
+Because floor means **go down to the nearest integer**, not toward zero
+
+## 3️⃣ Modulus `%` → gives the **remainder**
+
+### What it does
+
+* Returns what’s **left over** after division
+
+```python
+print(10 % 2)
+print(7 % 2)
+```
+
+Output:
+
+```python
+0
+1
+```
+
+Think:
+
+```python
+7 ÷ 2 = 3 remainder 1
+```
+
+So:
+
+```python
+7 % 2 = 1
+```
+
+## 🔗 How all three are connected
+
+For any two numbers `a` and `b`:
+
+```python
+a = (a // b) * b + (a % b)
+```
+
+Example:
+
+```python
+a = 7
+b = 2
+
+print(a // b)  # 3
+print(a % b)   # 1
+```
+
+```python
+7 = 3 * 2 + 1
+```
+
+Always true ✅
+
+## 🧠 Real-life intuition
+
+### 🍕 Pizza example
+
+You have **7 slices**, **2 people**.
+
+* `/` → `7 / 2 = 3.5` slices each
+* `//` → `7 // 2 = 3` full slices each
+* `%` → `7 % 2 = 1` slice left ove
+
+## 🧪 Common beginner use cases
+
+### 🔹 Check even or odd
+
+```python
+num = 10
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+### 🔹 Pagination (pages of results)
+
+```python
+total_items = 23
+items_per_page = 5
+
+pages = total_items // items_per_page
+extra = total_items % items_per_page
+```
+
+### 🔹 Time conversion
+
+```python
+seconds = 367
+minutes = seconds // 60
+remaining_seconds = seconds % 60
+```
+
+## 📌 Quick Comparison Table
+
+| Operator | Name           | Returns   | Example  | Result |
+| -------- | -------------- | --------- | -------- | ------ |
+| `/`      | Division       | Float     | `7 / 2`  | `3.5`  |
+| `//`     | Floor division | Integer   | `7 // 2` | `3`    |
+| `%`      | Modulus        | Remainder | `7 % 2`  | `1`    |
+
+## ⚠️ Common beginner mistake
+
+```python
+a = input("Enter number: ")
+print(a % 2)   # ❌ ERROR
+```
+
+Why?
+`input()` gives **string**, not number.
+
+✅ Fix:
+
+```python
+a = int(input("Enter number: "))
+print(a % 2)
+```
