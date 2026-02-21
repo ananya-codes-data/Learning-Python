@@ -77,3 +77,63 @@
 
 # print("The area of the circle is", area_of_circle)
 # print("The circumference of the circle is", circumference_of_circle)
+
+# 8. slope, x-intercept, y-intercept
+# y = mx + b
+# equation: y = 2x -2
+# m = 2       # slope
+# b = -2      # y-intercept value
+
+# print("Slope:", m)
+# print("Y-intercept: (0 ,", b,")")
+
+# to find x-intercept, set y = 0
+# 0 = 2x -2
+# 2x = 2
+# x = 1
+
+# x_intercept = 1
+# print("X-intercept: (", x_intercept, ", 0)")
+
+# 9. slope, euclidean distance
+# x1, y1 = 2, 2
+# x2, y2 = 6, 10
+
+# slope = (y2 - y1) / (x2 - x1)
+
+# print("Slope between points:", slope)
+
+
+# distance = ((x2 - x1)**2 + (y2 - y1)**2) ** 0.5
+
+# print("Euclidean Distance:", distance)
+
+# 10.
+# equation = y = 2x - 2
+
+# check point (2,2)
+# print(2 == 2*2 - 2)
+
+# check point (6,10)
+# print(10 == 2*6 - 2)
+
+# 11.
+# x = float(input("Enter the value of x:"))
+# y = x**2 + 6*x + 9
+
+# print("The value of y is", y)
+# print("x=", x, "y=", y)
+# print("(", x, ",", y, ")")
+
+# by factorization we get the value of x to be -3
+# so for x = -3, y = 0
+
+# 12.
+# strings
+word_1 = "python"
+word_2 = "dragon"
+# find and print lengths
+print(len(word_1))
+print(len(word_2))
+# falsy comparison statement
+comparison = len(word_1) > len(word_2)
