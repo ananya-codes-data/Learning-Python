@@ -130,10 +130,46 @@
 
 # 12.
 # strings
-word_1 = "python"
-word_2 = "dragon"
+# word_1 = "python"
+# word_2 = "dragon"
 # find and print lengths
-print(len(word_1))
-print(len(word_2))
+# print(len(word_1))
+# print(len(word_2))
 # falsy comparison statement
-comparison = len(word_1) > len(word_2)
+# comparison = len(word_1) > len(word_2)
+# print("Is length of python greater than dragon?", comparison)
+
+# 13.
+# Check if 'on' is present in both using AND operator
+# result_1 = ("on" in word_1) and ("on" in word_2)
+# print(result_1)
+
+# 14.
+# sentence = "I hope this course is not full of jargon"
+# result_2 = "jargon" in sentence
+# print(result_2)
+
+# 15.
+# print(not(result_1))
+
+# 16.
+# finding length of word - python
+# converting it to float & then to string
+# finally checking the if the length is string or not
+# print(type(str(float(len(word_1)))))
+
+# 17. checking if a number is even or not
+# number = float(input("Enter a number:"))    # user input
+# even_number = number % 2    # using modulus operator for finding remainder
+# print(even_number == 0)     # if the remainder is 0 then that becomes an even number
+
+# 18. checking if the result of both num would be equal
+# num_1 = 7 // 3
+# num_2 = 2.7
+
+# print(num_1 == int(num_2))      # converting num_2 to integer
+
+# 19. Check if type of '10' is equal to type of 10
+# num_3 = "10"
+# num_4 = 10
+# print(type(num_3) == type(num_4))
