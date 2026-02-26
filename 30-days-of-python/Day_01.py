@@ -172,3 +172,4 @@ dy = y2 - y1
 distance = (dx*dx + dy*dy) ** 0.5
 
 print(distance)
+# TODO: calculate using "math" lib
