@@ -108,6 +108,8 @@ print(2 == 2*2 - 2)
 # check point (6,10)
 print(10 == 2*6 - 2)
 
+# TODO: checking using if-else
+
 # 11.
 x = float(input("Enter the value of x:"))
 y = x**2 + 6*x + 9
