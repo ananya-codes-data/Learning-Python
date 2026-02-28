@@ -268,11 +268,87 @@ company = string_6 + string_7 + string_8 + string_7 + string_9
 # print(company.replace("Coding", "Python"))
 
 # 12.
-script = "Python for Everyone"
-print(script.replace("Everyone", "All"))
+# script = "Python for Everyone"
+# print(script.replace("Everyone", "All"))
 
 # TODO: 13.
 
 # TODO: 14.
 
 # 15.
+# print(company[0])
+
+# 16.
+# print(company[len(company) - 1])
+
+# 17.
+# print(company[10])
+
+# TODO: 18.
+
+# TODO: 19.
+
+# 20.
+# print(company.index("C"))
+
+# 21.
+# print(company.index("F"))
+
+# 22.
+# script = "Coding For All People"
+# print(script.rfind("l"))
+
+# 23.
+# sentence = "You cannot end a sentence with because because because is a conjunction"
+# print(sentence.find("because"))
+
+# 24.
+# print(sentence.rfind("because"))
+
+# 25.
+# print(sentence[31:54])
+# TODO: implement the solution with find() and rfind() methods
+
+# 26. & 27. -- repeated questions
+
+# 28.
+# print(company.startswith("Coding"))
+
+# 29.
+# print(company.endswith("coding"))
+
+# 30.
+# word = "   Coding For All      "
+# print(word.replace("   ", ""))
+
+# 31.
+# variable_1 = "30DaysOfPython"
+# variable_2 = "thirty_days_of_python"
+# print(variable_1.isidentifier())
+# print(variable_2.isidentifier())
+
+# TODO: 32.
+
+# 33.
+# sentence_2 = "I am enjoying this challenge.\nI just wonder what is next."
+# print(sentence_2)
+
+# 34.
+# script_2 = "Name\tAge\tCountry\tCity\nAsabeneh\t250\tFinland\tHelsinki"
+# print(script_2)
+
+# 35.
+# radius = 10
+# area = 3.14 * radius ** 2
+# print(f"The area of a circle with radius {radius} is {area} meters square.")
+
+# 36.
+a = 8
+b = 6
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b:.2f}")
+print(f"{a} % {b} = {a % b}")
+print(f"{a} // {b} = {a // b}")
+print(f"{a} ** {b} = {a ** b}")
