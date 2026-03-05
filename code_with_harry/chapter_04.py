@@ -31,8 +31,8 @@ l1 = [1, 34, 62, 2, 6, 11]
 # l1.sort()       # sorting of numerical list in increasing order
 # print(l1)
 
-# l1.reverse()
-# print(l1)       # reversing the complete list
+# l1.reverse()      # reversing the complete list
+# print(l1)
 
-l1.insert(3, 2210)
+l1.insert(3, 2210)      # inserting object at particular index
 print(l1)
