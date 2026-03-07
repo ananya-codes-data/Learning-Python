@@ -34,12 +34,49 @@ l1 = [1, 34, 62, 2, 6, 11]
 # l1.reverse()      # reversing the complete list
 # print(l1)
 
-# l1.insert(3, 2210)      # inserting object at particular index
+# l1.insert(3, 2210)      # inserting element at particular index
 # print(l1)               # insert 2210 such that its index in the list is 3
 
 # print(l1.pop(3))      # prints the value at the index
 # l1.pop(3)       # deletes element at the specific index
 # print(l1)       # returns the new list as result
 
-l1.remove(34)
-print(l1)
+# l1.remove(34)       # removes a particular value from the list
+# print(l1)
+
+# TODO: explore more list methods with the help of chatgpt
+
+# Tuples
+# similar to list but the only difference is tuple is immutable while list is mutable
+
+# a = (1, 2, 5, 6)    # tuple
+# print(type(a))      # checking the data type of a
+
+# b = ()     # empty tuple
+# print(type(b))        # checking the data type of b
+
+# c = (1)     # here the data type will be integer
+# print(type(c))      # checking the data type of c
+
+# to have a single element in a tuple we have to put comma
+# d = (1,)        # here it is a tuple with a single element
+# print(type(d))      # checking the data type of d
+
+# e = (1, 54, 2210, 32, False, "Rohan", "Shivam")     # tuple having multiple elements
+# print(type(e))      # checking the data type of e
+# e[0] = 45     # throws error as tuple is immutable, a new tuple can be made but it cannot be changed
+# print(e)
+
+# Tuple methods
+# e = (1, 54, 2210, 32, False, "Rohan", 2210, "Shivam")
+# print(e)
+
+# no = e.count(2210)      # calculates the number of times an element is present inside the tuple
+# print(no)   # prints the number of times the element is present
+
+# i = e.index(2210)       # will return the index of the first occurrence of the element in the tuple
+# print(i)        # prints the index number
+
+# print(len(e))   # prints length of the tuple
+
+# TODO: explore more tuple methods with the help of chatgpt
