@@ -44,7 +44,6 @@ l1 = [1, 34, 62, 2, 6, 11]
 # l1.remove(34)       # removes a particular value from the list
 # print(l1)
 
-# TODO: explore more list methods with the help of chatgpt
 
 # Tuples
 # similar to list but the only difference is tuple is immutable while list is mutable
@@ -78,5 +77,3 @@ l1 = [1, 34, 62, 2, 6, 11]
 # print(i)        # prints the index number
 
 # print(len(e))   # prints length of the tuple
-
-# TODO: explore more tuple methods with the help of chatgpt
