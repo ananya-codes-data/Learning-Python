@@ -77,3 +77,46 @@ l1 = [1, 34, 62, 2, 6, 11]
 # print(i)        # prints the index number
 
 # print(len(e))   # prints length of the tuple
+
+
+# Practice Set
+
+# 1.
+# fruits = []
+
+# f1 = input("Enter fruit name:")
+# fruits.append(f1)
+# f2 = input("Enter fruit name:")
+# fruits.append(f2)
+# f3 = input("Enter fruit name:")
+# fruits.append(f3)
+# f4 = input("Enter fruit name:")
+# fruits.append(f4)
+# f5 = input("Enter fruit name:")
+# fruits.append(f5)
+# f6 = input("Enter fruit name:")
+# fruits.append(f6)
+# f7 = input("Enter fruit name:")
+# fruits.append(f7)
+
+# print(fruits)
+
+# 2.
+marks = []
+
+f1 = int(input("Enter marks here:"))
+marks.append(f1)
+f2 = int(input("Enter marks here:"))
+marks.append(f2)
+f3 = int(input("Enter marks here:"))
+marks.append(f3)
+f4 = int(input("Enter marks here:"))
+marks.append(f4)
+f5 = int(input("Enter marks here:"))
+marks.append(f5)
+f6 = int(input("Enter marks here:"))
+marks.append(f6)
+
+marks.sort()
+
+print(marks)
