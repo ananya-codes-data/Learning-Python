@@ -107,12 +107,35 @@
 # del list      # to delete the list completely
 # del list [index:index]        # this deletes items from given indexes
 
-# TODO: try with example
+# test_2 = [25, 81, 49, 61, 75, 43]
+# del test_2[2]
+# print(test_2)     # [25, 81, 61, 75, 43]
+# del test_2[1:3]
+# print(test_2)    # [25, 75, 43]
+# del test_2
+# print(test_2)   # NameError: name 'test_2' is not defined
 
-# Clearing List Items
-name = ["Rahul", "Amit", "Sneha", "Hannah"]
-name.clear()
-print(name)     # []
+# Clearing List Items -- empties the list but the list still exists
+# name = ["Rahul", "Amit", "Sneha", "Hannah"]
+# name.clear()
+# print(name)     # []
 
 # Copying a List
+# simply doing list_1 = list_2 won't help much
+# any change in list_2 will also be reflected in list_1
+# to avoid that we use copy()
+# test_3 = [23, 45, 67, 89, 12, 34]
+# test_4 = test_3
+# print(test_4)       # [23, 45, 67, 89, 12, 34]
+# test_4.append(82)
+# print(test_4)       # [23, 45, 67, 89, 12, 34, 82]
+# print(test_3)       # [23, 45, 67, 89, 12, 34, 82]
 
+# using copy()
+# test_3 = [23, 45, 67, 89, 12, 34]
+# test_4 = test_3.copy()
+# print(test_4)     # [23, 45, 67, 89, 12, 34]
+# test_4.append(82)
+# print(test_4)     # [23, 45, 67, 89, 12, 34, 82]
+# print(test_3)     # [23, 45, 67, 89, 12, 34]
+# using copy() does not change the original list
