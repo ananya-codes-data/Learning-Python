@@ -139,3 +139,61 @@
 # print(test_4)     # [23, 45, 67, 89, 12, 34, 82]
 # print(test_3)     # [23, 45, 67, 89, 12, 34]
 # using copy() does not change the original list
+
+
+# Joining Lists
+    # Plus Operator (+)
+# random_1 = [21, 12]
+# random_2 = [22, 10, 20, 1]
+# random_join = random_1 + random_2
+# print(random_join)    # [21, 12, 22, 10, 20, 1]
+
+    # extend()
+# random_1.extend(random_2)
+# print(random_1)   # [21, 12, 22, 10, 20, 1]
+
+# random_3 = [12, 23, 34]
+# random_4 = [45, 56, 67]
+# random_5 = [78, 89, 90]
+# random_3.extend(random_4)
+# random_3.extend(random_5)
+# print(random_3)     # [12, 23, 34, 45, 56, 67, 78, 89, 90]
+
+# Counting Items in a List
+# count() returns the number fo times an item appears in a list
+# random_6 = [12, 34, 56, 0, 1, 12, 1, 1]
+# number = random_6.count(1)
+# print(number)        # 3
+
+# Finding Index of an Item
+# index() method returns the index of first occurence of an item in the list
+# position = random_6.index(12)
+# print(position)   # 0
+
+# Reversing a List
+# reverse() method reverses the order of a list
+# random_7 = [0, 1, 2, 3, 4, 5, 6, 7]
+# random_7.reverse()
+# print(random_7)     # [7, 6, 5, 4, 3, 2, 1, 0]
+
+# Sorting List Items
+# To sort lists we can use sort() method or sorted() built-in functions
+# The sort() method reorders the list items in ascending order 
+# and modifies the original list
+# If an argument of sort() method reverse is equal to true,
+# it will arrange the list in descending order.
+
+# random_8 = [32, 24, 80, 64, 72]
+# random_8.sort()
+# print(random_8)     # [24, 32, 64, 72, 80]
+# random_8.sort(reverse=True)
+# print(random_8)         # [80, 72, 64, 32, 24]
+
+# print(sorted(random_8))     # [24, 32, 64, 72, 80]
+# print(sorted(random_8,reverse=True))        # [80, 72, 64, 32, 24]
+
+
+# Exercises: Day 5
+
+# Exercises: Level 1
+
