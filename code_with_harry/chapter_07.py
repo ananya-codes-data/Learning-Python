@@ -7,6 +7,7 @@
 # while loops
 # for loops
 
+
 # while loop
 
 # i = 1
@@ -27,6 +28,7 @@
 #     print("Harry")
 #     i += 1
 
+
 # list using while loop
 
 # l = [1, 10.22, "Harry", False, "Rohan", "This", "Shubham"]
@@ -36,6 +38,8 @@
 # while(i < len(l)):
 #     print(l[i])
 #     i += 1
+
+
 
 # for loops
 
@@ -51,6 +55,7 @@
 
 # for i in range(20, 62, 4):
 #     print(i)        # 20, 24, 28, 32,...,56, 60
+
 
 # for loop iterate
 
@@ -75,6 +80,7 @@
 # for i in s:
 #     print(i)
 
+
 # for loop with else
 
 # l = [1, 7, 8]
@@ -86,6 +92,7 @@
 #     print("done")  # this is printed when the loop exhausts!
 
 
+
 # break statement
 
 # for i in range(0, 100):
@@ -93,12 +100,16 @@
 #         break   # exit the loop right now
 #     print(i)
 
+
+
 # continue statement
 
 # for i in range(0, 100):
 #     if(i == 34):
 #         continue   # skip this iteration
 #     print(i)
+
+
 
 # pass statement - null statement in python
 
@@ -110,6 +121,7 @@
 # while(i < 45):
 #     print(i)
 #     i += 1
+
 
 
 # Practice Set
@@ -142,3 +154,8 @@
 # 4.
 
 n = int(input("Enter a number:"))
+
+for i in range(2, n):
+    if(n % i)  == 0:
+        print("Number is not prime")
+        break
