@@ -227,9 +227,9 @@ def is_even(num):
 
 # function calling
 
-for i in range(1, 11):
-    x = is_even(i)
-    print(f"{i} is {x}")
+# for i in range(1, 11):
+#     x = is_even(i)
+#     print(f"{i} is {x}")
 
 # 1 is odd
 # 2 is even
@@ -242,3 +242,59 @@ for i in range(1, 11):
 # 9 is odd
 # 10 is even
 
+# create a lambda function, if given a input the output is it's square
+
+a = lambda x: x**2
+
+# print(a(15))    # 225
+
+# lambda function to sum up two numbers
+
+b = lambda a,b: a+b
+
+# print(b(2,9))   # 11
+
+# check if a string has 'a'
+
+# method 1
+c = lambda x: x.startswith('a')
+
+# method 2
+c = lambda x: 'a' in x
+
+# print(c('apple'))   # True
+
+# odd or even
+
+d = lambda x: 'even' if x % 2 == 0 else 'odd'
+
+# print(d(40))    # even
+
+# Higher Order Function
+
+def square(x):
+    return x**2
+
+# HOF
+def transform(f, L):
+    output = []
+    for i in L:
+        output.append(f(i))
+
+    print(output)
+
+L = [1, 2, 3, 4, 5]
+
+transform(square, L)
+
+
+def transform(f, L):
+    output = []
+    for i in L:
+        output.append(f(i))
+
+    print(output)
+
+L = [1, 2, 3, 4, 5]
+
+transform(lambda x: x**3, L)
