@@ -1,22 +1,24 @@
 #  session 4: Lists
 
-# list comprehension
+# # # # # # # # # # # #
+# list comprehension  #
+# # # # # # # # # # # #
 
 # add 1 to 10 numbers to a list
 
 # method 1
-# l = []
+l = []
 
-# for i in range(1, 11):
-#     l.append(i)
+for i in range(1, 11):
+    l.append(i)
 
-# print(l)
+print(l)
 
 # method 2
 
-# l = [i for i in range(1, 11)]
+l = [i for i in range(1, 11)]
 
-# print(l)
+print(l)
 
 # scalar multiplication on a vector
 
@@ -26,43 +28,43 @@ s = -3
 # [-6, -9, -12]
 
 # method 1
-# x = []
-# for i in v:
-#     x.append(i*s)
+x = []
+for i in v:
+    x.append(i*s)
 
-# print(x)
+print(x)
 
 # method 2
-# print([i*s for i in v])
+print([i*s for i in v])
 
 # numbers and their squares
 
-# l = [1,2,3,4,5]
+l = [1,2,3,4,5]
 
 # method 1
-# x = []
+x = []
 
-# for i in l:
-#     x.append(i**2)
+for i in l:
+    x.append(i**2)
 
-# print(x)
+print(x)
 
 # method 2
-# print([i**2 for i in l])
+print([i**2 for i in l])
 
 # Print all numbers divisible by 5 in the range of 1 to 50
 
 # method 1
-# l = []
+l = []
 
-# for i in range(1, 51):
-#     if i % 5 == 0:
-#         l.append(i)
+for i in range(1, 51):
+    if i % 5 == 0:
+        l.append(i)
 
-# print(l)
+print(l)
 
 # method 2
-# print([i for i in range(1, 51) if i % 5 == 0])
+print([i for i in range(1, 51) if i % 5 == 0])
 
 # find languages which start with letter p
 languages = ['java','python','php','c','javascript']
@@ -70,13 +72,13 @@ languages = ['java','python','php','c','javascript']
 # method 1
 x = []
 
-# for i in languages:
-#     if i.startswith('p'):
-#         x.append(i)
-# print(x)  # ['python', 'php']
+for i in languages:
+    if i.startswith('p'):
+        x.append(i)
+print(x)  # ['python', 'php']
 
 # method 2
-# print([i for i in languages if i.startswith('p')])    # ['python', 'php']
+print([i for i in languages if i.startswith('p')])    # ['python', 'php']
 
 
 # Nested if with List Comprehension
@@ -86,40 +88,40 @@ my_fruits = ['apple','kiwi','grapes','banana']
 # add new list from my_fruits and items if the fruit exists in basket and also starts with 'a'
 
 # method 1
-# e = []
+e = []
 
-# for i in my_fruits:
-#     if i in basket and i.startswith('a'):
-#         e.append(i)
-# print(e)  # ['apple']
+for i in my_fruits:
+    if i in basket and i.startswith('a'):
+        e.append(i)
+print(e)  # ['apple']
 
 # method 2
-# print([i for i in my_fruits if i in basket if i.startswith('a')])     # ['apple']
+print([i for i in my_fruits if i in basket if i.startswith('a')])     # ['apple']
 
 # Print a (3,3) matrix using list comprehension -> Nested List comprehension
 
-# print([[i*j for i in range(1,4)] for j in range(1,4)])    # [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+print([[i*j for i in range(1,4)] for j in range(1,4)])    # [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
 
 
 # cartesian products -> List comprehension on 2 lists together
-# L1 = [1,2,3,4]
-# L2 = [5,6,7,8]
+L1 = [1,2,3,4]
+L2 = [5,6,7,8]
 
-# print([i*j for i in L1 for j in L2])      # [5, 6, 7, 8, 10, 12, 14, 16, 15, 18, 21, 24, 20, 24, 28, 32]
+print([i*j for i in L1 for j in L2])      # [5, 6, 7, 8, 10, 12, 14, 16, 15, 18, 21, 24, 20, 24, 28, 32]
 
 # Write a program to add items of 2 lists indexwise
 
 l1 = [1, 2, 3, 4]
 l2 = [-1, -2, -3, -4]
 
-# print(zip(l1, l2)) # <zip object at 0x000001E88F7A3940>
+print(zip(l1, l2)) # <zip object at 0x000001E88F7A3940>
 
-# print(list(zip(l1, l2))) # [(1, -1), (2, -2), (3, -3), (4, -4)]
+print(list(zip(l1, l2))) # [(1, -1), (2, -2), (3, -3), (4, -4)]
 
-# print([i + j for i,j in zip(l1, l2)]) # [0, 0, 0, 0]
+print([i + j for i,j in zip(l1, l2)]) # [0, 0, 0, 0]
 
 l = [1, 2, print, type, input]
-# print(l)    # [1, 2, <built-in function print>, <class 'type'>, <built-in function input>]
+print(l)    # [1, 2, <built-in function print>, <class 'type'>, <built-in function input>]
 
 
 # Create 2 lists from a given list where 
@@ -159,45 +161,45 @@ L = [1,2,1,2,3,4,5,3,4]
 t1 = (1, 2, 3, 4)
 t2 = (5, 6, 7, 8)
 
-# print(zip(t1, t2))      # <zip object at 0x0000024888693940>
+print(zip(t1, t2))      # <zip object at 0x0000024888693940>
 
-# print(list(zip(t1, t2)))       # [(1, 5), (2, 6), (3, 7), (4, 8)]     # list of tuples
+print(list(zip(t1, t2)))       # [(1, 5), (2, 6), (3, 7), (4, 8)]     # list of tuples
 
-# print(tuple(zip(t1, t2)))       # ((1, 5), (2, 6), (3, 7), (4, 8))      # tuple of tuples - 2D
+print(tuple(zip(t1, t2)))       # ((1, 5), (2, 6), (3, 7), (4, 8))      # tuple of tuples - 2D
 
 
 s1 = {1, 2, 3, 4, 5}
 s2 = {4, 5, 6, 7, 8}
 
-# print(s1.union(s2))
-# s1.update(s2)
-# print(s1)
-# print(s2)
+print(s1.union(s2))
+s1.update(s2)
+print(s1)
+print(s2)
 
 # print 1st 10 numbers and their squares
 
-# print({i: i**2 for i in range(1, 11)})      # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
+print({i: i**2 for i in range(1, 11)})      # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
 
 # using existing dict
 distances = {'delhi':1000,'mumbai':2000,'bangalore':3000}
 
-# print({key: value*0.62 for (key, value) in distances.items()})      # {'delhi': 620.0, 'mumbai': 1240.0, 'bangalore': 1860.0}
+print({key: value*0.62 for (key, value) in distances.items()})      # {'delhi': 620.0, 'mumbai': 1240.0, 'bangalore': 1860.0}
 
 # using zip
 days = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 temp_C = [30.5,32.6,31.8,33.4,29.8,30.2,29.9]
 
-# print({i: j for (i, j) in zip(days, temp_C)})   # {'Sunday': 30.5, 'Monday': 32.6, 'Tuesday': 31.8, 'Wednesday': 33.4, 'Thursday': 29.8, 'Friday': 30.2, 'Saturday': 29.9}
+print({i: j for (i, j) in zip(days, temp_C)})   # {'Sunday': 30.5, 'Monday': 32.6, 'Tuesday': 31.8, 'Wednesday': 33.4, 'Thursday': 29.8, 'Friday': 30.2, 'Saturday': 29.9}
 
 # using if condition
 products = {'phone':10,'laptop':0,'charger':32,'tablet':0}
 
-# print({i: j for (i,j) in products.items() if j > 0})    # {'phone': 10, 'charger': 32}
+print({i: j for (i,j) in products.items() if j > 0})    # {'phone': 10, 'charger': 32}
 
 # Nested Comprehension
 # print tables of number from 2 to 4
 
-# print({i: {j: i*j for j in range(1, 11)} for i in range(2, 5)})
+print({i: {j: i*j for j in range(1, 11)} for i in range(2, 5)})
 
 # {2: {1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12, 7: 14, 8: 16, 9: 18, 10: 20}, 
 # 3: {1: 3, 2: 6, 3: 9, 4: 12, 5: 15, 6: 18, 7: 21, 8: 24, 9: 27, 10: 30}, 
@@ -227,9 +229,9 @@ def is_even(num):
 
 # function calling
 
-# for i in range(1, 11):
-#     x = is_even(i)
-#     print(f"{i} is {x}")
+for i in range(1, 11):
+    x = is_even(i)
+    print(f"{i} is {x}")
 
 # 1 is odd
 # 2 is even
@@ -246,13 +248,13 @@ def is_even(num):
 
 a = lambda x: x**2
 
-# print(a(15))    # 225
+print(a(15))    # 225
 
 # lambda function to sum up two numbers
 
 b = lambda a,b: a+b
 
-# print(b(2,9))   # 11
+print(b(2,9))   # 11
 
 # check if a string has 'a'
 
@@ -262,13 +264,13 @@ c = lambda x: x.startswith('a')
 # method 2
 c = lambda x: 'a' in x
 
-# print(c('apple'))   # True
+print(c('apple'))   # True
 
 # odd or even
 
 d = lambda x: 'even' if x % 2 == 0 else 'odd'
 
-# print(d(40))    # even
+print(d(40))    # even
 
 # Higher Order Function
 
@@ -298,3 +300,66 @@ def transform(f, L):
 L = [1, 2, 3, 4, 5]
 
 transform(lambda x: x**3, L)
+
+# map
+# square the items of a list
+
+print(list(map(lambda x: x**2, [1, 2, 3, 4, 5])))     # [1, 4, 9, 16, 25]
+
+# odd/even labelling of list items
+
+l = [1, 2, 3, 4, 5]
+
+print(list(map(lambda x: 'even' if x % 2 == 0 else 'odd', l)))        # ['odd', 'even', 'odd', 'even', 'odd']
+
+# fetch names from a list of dict
+
+users = [
+    {
+        'name':'Rahul',
+        'age':45,
+        'gender':'male'
+    },
+    {
+        'name':'Nitish',
+        'age':33,
+        'gender':'male'
+    },
+    {
+        'name':'Ankita',
+        'age':50,
+        'gender':'female'
+    }
+]
+
+print(list(map(lambda users: users['gender'], users)))    # ['male', 'male', 'female']
+
+
+# filter
+
+# numbers greater than 5
+
+l = [3, 4, 5, 6, 7]
+
+print(list(filter(lambda x: x > 5, l)))     # [6, 7]
+
+# fetch fruits starting with 'a'
+
+fruits = ['apple', 'guava', 'cherry']   # ['apple']
+
+print(list(filter(lambda fruit: fruit.startswith('a'), fruits)))
+
+
+# reduce
+
+# sum of all item
+
+import functools
+
+print(functools.reduce(lambda x,y: x+y, [1, 2, 3, 4, 5]))       # 15
+
+print(functools.reduce(lambda x,y: x*y, [1, 2, 3, 4, 5]))       # 120
+
+# find min
+
+print(functools.reduce(lambda x,y: x if x < y else y, [23, 11, 45, 10, 1]))     # 1
