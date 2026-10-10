@@ -1,7 +1,9 @@
 # Class and Object
+# creating a banking program to understand class, object, constructor, methods and functions
 
+# banking program
 class Atm:  # class name (pascal case: MyWorld)
-    # constructor (special function)
+    # constructor (special function) (when object is created constructor is executed on it own)
     def __init__(self):
         self.pin = ''
         self.balance = 0
@@ -85,4 +87,59 @@ obj = Atm()     # objectname = classname()
 
 print(type(obj))    # <class '__main__.Atm'>
 
-# obj.pin   # object can access the things that are present in class
+obj.pin   # object can access the things that are present in class
+
+# creating our own data type
+
+class Fraction:
+
+    # parameterized constructor
+    def __init__(self, x, y):
+        self.num = x
+        self.den = y
+
+    def __str__(self):      # when we put object inside print function this method would be executed
+        return '{}/{}'.format(self.num, self.den)
+
+    def __add__(self, other):       # addition
+        new_num = self.num*other.den + self.den*other.num
+        new_den = self.den*other.den
+
+        return '{}/{}'.format(new_num, new_den)
+
+    def __sub__(self, other):       # subtraction
+        new_num = self.num*other.den - self.den*other.num
+        new_den = self.den*other.den
+    
+        return '{}/{}'.format(new_num, new_den)
+
+    def __mul__(self, other):       # multiplication
+        new_num = self.num*other.num
+        new_den = self.den*other.den
+        
+        return '{}/{}'.format(new_num, new_den)
+
+    def __truediv__(self, other):       # division
+        new_num = self.num*other.den
+        new_den = self.den*other.num
+        
+        return '{}/{}'.format(new_num, new_den)
+
+    def convert_to_decimal(self):       # covert fraction to decimal
+        return self.num/self.den
+
+fr1 = Fraction(3,4)
+print(fr1)  # 3/4
+
+fr2 = Fraction(1,2)
+print(fr2)  # 1/2
+
+print(fr1 + fr2)    # 10/8
+
+print(fr1 - fr2)    # 2/8
+
+print(fr1 * fr2)    # 3/8
+
+print(fr1 / fr2)    # 6/4
+
+print(fr1.convert_to_decimal())     # 0.75
