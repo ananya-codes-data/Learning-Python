@@ -143,3 +143,67 @@ print(fr1 * fr2)    # 3/8
 print(fr1 / fr2)    # 6/4
 
 print(fr1.convert_to_decimal())     # 0.75
+
+
+# Write OOP classes to handle the following scenarios:
+
+# A user can create and view 2D coordinates
+# A user can find out the distance between 2 coordinates
+# A user can find find the distance of a coordinate from origin
+# A user can check if a point lies on a given line
+# A user can find the distance between a given 2D point and a given line
+
+class Point:
+
+    def __init__(self, x, y):
+        self.x_cod = x
+        self.y_cod = y
+
+    def __str__(self):
+        return '<{},{}>'.format(self.x_cod, self.y_cod)
+
+    def euclidean_distance(self, other):
+        return ((other.x_cod - self.x_cod)**2 + (other.y_cod - self.y_cod)**2)**0.5
+
+    def distance_from_origin(self):
+        # return (self.x_cod**2 + self.y_cod**2)**0.5
+        return self.euclidean_distance(Point(0,0))
+
+class Line:
+
+    def __init__(self, A, B, C):
+        self.A = A
+        self.B = B
+        self.C = C
+
+    def __str__(self):
+        return '{}x + {}y + {} = 0'.format(self.A, self.B, self.C)
+
+    def point_on_line(line, point):
+        if line.A*point.x_cod + line.B*point.y_cod + line.C == 0:
+            return "lies on the line"
+        else:
+            return "does not lie on the line"
+
+    def shortest_distance(line, point):
+        return abs(line.A*point.x_cod + line.B*point.y_cod + line.C)/ (line.A**2 + line.B**2)**0.5
+
+p1 = Point(10,10)
+print(p1)       # <10,10>
+
+p2 = Point(1,1)
+print(p2)       # <1,1>
+
+print(p1.euclidean_distance(p2))    # 12.727922061357855
+
+print(p1.distance_from_origin())    # 14.142135623730951
+
+l1 = Line(3, 4, 5)
+print(l1)       # 3x + 4y + 5 = 0
+
+l2 = Line(1, 1, -2)
+print(l2)
+
+print(l2.point_on_line(p2))       # lies on the line
+
+print(l2.shortest_distance(p2))     # 0.0
