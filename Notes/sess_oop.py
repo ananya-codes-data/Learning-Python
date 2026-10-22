@@ -3,11 +3,30 @@
 
 # banking program
 class Atm:  # class name (pascal case: MyWorld)
+
+    __counter = 1
+
     # constructor (special function) (when object is created constructor is executed on it own)
     def __init__(self):
         self.pin = ''
-        self.balance = 0
-        self.menu()     # function calling
+        self.__balance = 0
+        self.cid = Atm.__counter
+        Atm.__counter = Atm.__counter + 1
+        # self.menu()     # function calling
+    
+    # utility functions
+    @staticmethod
+    def get_counter():
+        return Atm.__counter
+
+    def get_balance(self):
+        return self.__balance
+
+    def set_balance(self, new_value):
+        if type(new_value) == int:
+            self.__balance = new_value
+        else:
+            print('Change the type of the value')
 
     def menu(self):
         user_input = input("""
@@ -39,7 +58,7 @@ class Atm:  # class name (pascal case: MyWorld)
         self.pin = user_pin
 
         user_balance = int(input('enter balance:'))
-        self.balance = user_balance
+        self.__balance = user_balance
 
         print('PIN CREATED SUCCESSFULLY')
         self.menu()
@@ -60,7 +79,7 @@ class Atm:  # class name (pascal case: MyWorld)
     def check_balance(self):        # function for checking balance
         user_pin = input('enter your pin:')
         if user_pin == self.pin:
-            print('your balance is', self.balance)
+            print('your balance is', self.__balance)
             self.menu()
         else:
             print("can't show the balance")
@@ -71,10 +90,10 @@ class Atm:  # class name (pascal case: MyWorld)
         if user_pin == self.pin:
             # ask for withdrawal amount and also show the balance left
             withdrawal_amount = int(input('enter the withdrawal amount:'))
-            if withdrawal_amount <= self.balance:
-                self.balance = self.balance - withdrawal_amount
+            if withdrawal_amount <= self.__balance:
+                self.__balance = self.__balance - withdrawal_amount
                 print(withdrawal_amount, 'withdrawn successful')
-                print('balance left in the account:', self.balance)
+                print('balance left in the account:', self.__balance)
             else:
                 print('not enough balance')
         else:
@@ -82,6 +101,16 @@ class Atm:  # class name (pascal case: MyWorld)
         self.menu()
 
 obj = Atm()     # objectname = classname()
+
+c1 = Atm()
+
+c2 = Atm()
+
+c3 = Atm()
+
+# print(c1.cid)     # 2
+
+print(Atm.get_counter())    # 5
 
 # constructor is executed as we create the object of the class
 
@@ -188,6 +217,15 @@ class Line:
     def shortest_distance(line, point):
         return abs(line.A*point.x_cod + line.B*point.y_cod + line.C)/ (line.A**2 + line.B**2)**0.5
 
+    def intersection_points(self, other):
+        det =  self.A*other.B - other.A*self.B 
+        if det != 0:
+            x = (self.B*other.C - other.B*self.C) / det
+            y = (other.A*self.C - self.A*other.C) / det
+            return f"lines are intersecting at {Point(x,y)}"
+        else:
+            return "lines are parallel"
+
 p1 = Point(10,10)
 print(p1)       # <10,10>
 
@@ -207,3 +245,62 @@ print(l2)
 print(l2.point_on_line(p2))       # lies on the line
 
 print(l2.shortest_distance(p2))     # 0.0
+
+print(l1.intersection_points(l2))       # lines are intersecting at <13.0,-11.0>
+
+# collection of objects
+
+class Person:
+
+  def __init__(self,name,gender):
+    self.name = name
+    self.gender = gender
+
+p1 = Person('ananya','female')
+p2 = Person('shan','male')
+p3 = Person('situ','male')
+
+L = [p1,p2,p3]
+
+print(L)        # the addresses of all the 3 objects since we don't have __str__ method in our class
+
+for i in L:
+  print(i)      # the addresses of all the 3 objects
+
+
+for i in L:
+  print(i.name, i.gender)
+# output    
+# ananya female
+# shan male
+# situ male
+
+
+d = {'p1':p1, 'p2':p2, 'p3':p3}
+
+for i in d:
+  print(i)
+# output
+# p1
+# p2
+# p3
+
+for i in d:
+  print(d[i])       # # the addresses of all the 3 objects
+
+
+for i in d:
+  print(d[i].name)
+# output
+# ananya
+# shan
+# situ
+
+for i in d:
+  print(d[i].gender)
+# output
+# female
+# male
+# male
+
+
