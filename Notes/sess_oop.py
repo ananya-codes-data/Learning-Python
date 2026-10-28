@@ -416,3 +416,41 @@ s=SmartPhone(20000, "Samsung", 12, "Android", 2)
 
 print(s.os)
 print(s.brand)
+
+
+# Abstraction
+
+# to create abstract class we have to import the below class and method
+from abc import ABC, abstractmethod
+
+# abstract class
+class BankApp(ABC):
+
+    # concrete method
+    def database(self):
+        print('connected to database')
+
+    # abstract method
+    @abstractmethod
+    def security(self):
+        pass
+
+    @abstractmethod
+    def display(self):
+        pass
+
+class MobileApp(BankApp):
+
+    def mobile_login(self):
+        print('login into mobile')
+
+    # we need to add the abstract method from the abstract class to inherit from it
+    def security(self):
+        print('mobile security')
+
+    def display(self):
+        print('display')
+
+mob = MobileApp()
+
+mob.database()      # connected to database
