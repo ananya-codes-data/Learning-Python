@@ -256,3 +256,253 @@ print(np.ceil(f1))  # round off to the larger number
 
 # Indexing and Slicing
 
+# Indexing
+
+a1 = np.arange(10)
+print(a1)   # [0 1 2 3 4 5 6 7 8 9]
+
+a2 = np.arange(12).reshape(3,4)
+print(a2)
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]]
+
+a3 = np.arange(8).reshape(2, 2, 2)
+print(a3)
+# [[[0 1]
+#   [2 3]]
+
+#  [[4 5]
+#   [6 7]]]
+
+print(a1[-1])   # 9
+
+print(a2[1, 2])     # 6
+
+print(a2[2, 3])     # 11
+
+print(a2[1, 0])     # 4
+
+print(a3[1, 0, 1])      # 5
+
+print(a3[0, 1, 0])      # 2
+
+print(a3[0, 0, 0])      # 0
+
+print(a3[1, 1, 0])      # 6
+
+
+# Slicing
+
+print(a1[2:5])      # [2 3 4]
+
+print(a1[2:5:2])      # [2 4]
+
+print(a1[2:7:2])      # [2 4 6]
+
+print(a2[0,:])      # [0 1 2 3]
+
+print(a2[:,2])      # [ 2  6 10]
+
+print(a2[1:,1:3])
+# [[ 5  6]
+#  [ 9 10]]
+
+print(a2[::2, ::3])
+# [[ 0  3]
+#  [ 8 11]]
+
+print(a2[::2, 1::2])
+# [[ 1  3]
+#  [ 9 11]]
+
+print(a2[1, ::3])      # [4 7]
+
+print(a2[:2, 1:])
+# [[1 2 3]
+#  [5 6 7]]
+
+a3 = np.arange(27).reshape(3, 3, 3)
+print(a3)
+# [[[ 0  1  2]
+#   [ 3  4  5]
+#   [ 6  7  8]]
+
+#  [[ 9 10 11]
+#   [12 13 14]
+#   [15 16 17]]
+
+#  [[18 19 20]
+#   [21 22 23]
+#   [24 25 26]]]
+
+print(a3[1])
+# [[ 9 10 11]
+#  [12 13 14]
+#  [15 16 17]]
+
+print(a3[::2])
+# [[[ 0  1  2]
+#   [ 3  4  5]
+#   [ 6  7  8]]
+
+#  [[18 19 20]
+#   [21 22 23]
+#   [24 25 26]]]
+
+print(a3[0, 1, :])      # [3 4 5]
+
+print(a3[1, :, 1])      # [10 13 16]
+
+print(a3[2, 1:, 1:])
+# [[22 23]
+#  [25 26]]
+
+print(a3[::2, 0, ::2])
+# [[ 0  2]
+#  [18 20]]
+
+
+# Iterating
+
+for i in a1:
+    if i % 2 == 0:
+        print(i)
+# 0
+# 2
+# 4
+# 6
+# 8
+
+for i in a2:
+    print(i)        # iterates and prints one row each time
+# [0 1 2 3]
+# [4 5 6 7]
+# [ 8  9 10 11]
+
+for i in a3:
+    print(i)        # iterates and prints one 2d array each time
+# [[0 1 2]
+#  [3 4 5]
+#  [6 7 8]]
+# [[ 9 10 11]
+#  [12 13 14]
+#  [15 16 17]]
+# [[18 19 20]
+#  [21 22 23]
+#  [24 25 26]]
+
+for i in np.nditer(a3):
+    print(i)    # converts into 1d and then prints every item
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+# 11
+# 12
+# 13
+# 14
+# 15
+# 16
+# 17
+# 18
+# 19
+# 20
+# 21
+# 22
+# 23
+# 24
+# 25
+# 26
+
+
+# Reshaping
+
+print(a2)
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]]
+
+print(np.transpose(a2))
+# [[ 0  4  8]
+#  [ 1  5  9]
+#  [ 2  6 10]
+#  [ 3  7 11]]
+
+print(a2.T)
+# [[ 0  4  8]
+#  [ 1  5  9]
+#  [ 2  6 10]
+#  [ 3  7 11]]
+
+print(a2.ravel())       # [ 0  1  2  3  4  5  6  7  8  9 10 11]
+
+
+# Stacking
+
+a4 = np.arange(12).reshape(3,4)
+print(a4)
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]]
+
+a5 = np.arange(12,24).reshape(3,4)
+print(a5)
+# [[12 13 14 15]
+#  [16 17 18 19]
+#  [20 21 22 23]]
+
+# horizontal stacking
+
+print(np.hstack((a4, a5)))
+# [[ 0  1  2  3 12 13 14 15]
+#  [ 4  5  6  7 16 17 18 19]
+#  [ 8  9 10 11 20 21 22 23]]
+
+# vertical stacking
+
+print(np.vstack((a4, a5)))
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]
+#  [12 13 14 15]
+#  [16 17 18 19]
+#  [20 21 22 23]]
+
+
+# Splitting
+
+# horizontal splitting
+
+print(np.hsplit(a4, 2))
+# [array([[0, 1],
+#        [4, 5],
+#        [8, 9]]), 
+# array([[ 2,  3],
+#        [ 6,  7],
+#        [10, 11]])]
+
+print(np.hsplit(a4, 4))
+# [array([[0],
+#        [4],
+#        [8]]), 
+# array([[1],
+#        [5],
+#        [9]]),
+# array([[ 2],
+#        [ 6],
+#        [10]]),
+# array([[ 3],
+#        [ 7],
+#        [11]])]
+
+
+print(np.vsplit(a5, 3))     # [array([[12, 13, 14, 15]]), array([[16, 17, 18, 19]]), array([[20, 21, 22, 23]])]
+
