@@ -506,3 +506,80 @@ print(np.hsplit(a4, 4))
 
 print(np.vsplit(a5, 3))     # [array([[12, 13, 14, 15]]), array([[16, 17, 18, 19]]), array([[20, 21, 22, 23]])]
 
+
+# numpy advanced
+
+# advanced indexing
+
+# Normal Indexing and slicing
+
+a = np.arange(12).reshape(4,3)
+print(a)
+# [[ 0  1  2]
+#  [ 3  4  5]
+#  [ 6  7  8]
+#  [ 9 10 11]]
+
+print(a[1,2])       # 5
+
+print(a[1:3, 1:3])
+# [[4 5]
+#  [7 8]]
+
+# Fancy indexing
+
+print(a[[0, 2, 3]])
+# [[ 0  1  2]
+#  [ 6  7  8]
+#  [ 9 10 11]]
+
+print(a[:, [1, 2]])
+# [[ 1  2]
+#  [ 4  5]
+#  [ 7  8]
+#  [10 11]]
+
+b = np.arange(24).reshape(6,4)
+print(b)
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]
+#  [12 13 14 15]
+#  [16 17 18 19]
+#  [20 21 22 23]]
+
+print(b[[0,2,3,-1]])
+# [[ 0  1  2  3]
+#  [ 8  9 10 11]
+#  [12 13 14 15]
+#  [20 21 22 23]]
+
+print(b[:, [0, 2, 3]])
+# [[ 0  2  3]
+#  [ 4  6  7]
+#  [ 8 10 11]
+#  [12 14 15]
+#  [16 18 19]
+#  [20 22 23]]
+
+# boolean indexing
+
+# sometimes we may need to filter out items on the basis of certain conditions at that point we would need boolean indexing
+
+a = np.random.randint(1, 100, 24).reshape(6,4)
+
+print(a)
+
+# numbers greater than 50
+print(a[a > 50])
+
+# numbers which are even
+print(a[a % 2 == 0])
+
+# numbers greater than 50 and even
+print(a[(a % 2 == 0) & (a > 50)])
+
+# when we work with boolean values we have to use bitwise operators rather than logical operators
+
+# numbers not divisible by 7
+print(a[a % 7 != 0])
