@@ -1,3 +1,5 @@
+# numpy s 13
+
 import numpy as np
 
 # 1d array (vector)
@@ -507,6 +509,8 @@ print(np.hsplit(a4, 4))
 print(np.vsplit(a5, 3))     # [array([[12, 13, 14, 15]]), array([[16, 17, 18, 19]]), array([[20, 21, 22, 23]])]
 
 
+
+# numpy s 14
 # numpy advanced
 
 # advanced indexing
@@ -564,8 +568,6 @@ print(b[:, [0, 2, 3]])
 
 # boolean indexing
 
-# sometimes we may need to filter out items on the basis of certain conditions at that point we would need boolean indexing
-
 a = np.random.randint(1, 100, 24).reshape(6,4)
 
 print(a)
@@ -579,7 +581,129 @@ print(a[a % 2 == 0])
 # numbers greater than 50 and even
 print(a[(a % 2 == 0) & (a > 50)])
 
-# when we work with boolean values we have to use bitwise operators rather than logical operators
-
 # numbers not divisible by 7
 print(a[a % 7 != 0])
+
+
+# Broadcasting
+
+# same shape
+a = np.arange(6).reshape(2,3)
+print(a)
+
+b = np.arange(6, 12).reshape(2,3)
+print(b)
+
+print(a + b)
+
+# different shape
+
+a = np.arange(6).reshape(2,3)
+print(a)
+
+b = np.arange(3).reshape(1,3)
+print(b)
+
+print(a + b)
+
+# Examples
+
+a = np.arange(12).reshape(4,3)
+b = np.arange(3)
+
+print(a)
+print(b)
+
+print(a + b)
+
+a = np.arange(12).reshape(3,4)
+b = np.arange(3)
+
+print(a)
+print(b)
+
+print(a + b)    # operands could not be broadcast together with shapes (3,4) (3,) 
+
+a = np.arange(3).reshape(1,3)
+b = np.arange(3).reshape(3,1)
+
+print(a)
+print(b)
+
+print(a+b)
+
+a = np.arange(3).reshape(1,3)
+b = np.arange(4).reshape(4,1)
+
+print(a)
+print(b)
+
+print(a + b)
+
+a = np.array([1])
+# shape -> (1,1)
+b = np.arange(4).reshape(2,2)
+# shape -> (2,2)
+
+print(a)
+print(b)
+
+print(a+b)
+
+a = np.arange(12).reshape(3,4)
+b = np.arange(12).reshape(4,3)
+
+print(a)
+print(b)
+
+print(a+b)      # operands could not be broadcast together with shapes (3,4) (4,3) 
+
+a = np.arange(16).reshape(4,4)
+b = np.arange(4).reshape(2,2)
+
+print(a)
+print(b)
+
+print(a+b)      # operands could not be broadcast together with shapes (4,4) (2,2)
+
+
+# Working with mathematical formulas
+
+a = np.arange(10)
+print(a)
+
+print(np.sum(a))
+
+print(np.sin(a))
+
+# sigmoid
+
+def sigmoid(array):
+    return 1/(1 + np.exp(-(array)))
+
+print(sigmoid(a))
+
+# mean squared error -- loss function in linear regression
+
+actual = np.random.randint(1, 50, 25)
+predicted = np.random.randint(1, 50, 25)
+
+def mse(actual, predicted):
+    return np.mean((actual - predicted)** 2)
+
+print(mse(actual, predicted))
+
+# binary cross entropy -- loss function in logistic regression
+
+
+# Working with missing values -> np.nan
+a = np.array([1, 2, 3, 4, np.nan, 6])
+print(a)
+
+print(a[~np.isnan(a)])
+
+
+# numpy s 15
+
+# numpy tricks
+
